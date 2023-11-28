@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@tanstack/react-table':
+    specifier: ^8.10.7
+    version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
   bootstrap:
     specifier: ^5.3.2
     version: 5.3.2(@popperjs/core@2.11.8)
@@ -596,6 +599,23 @@ packages:
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
+
+  /@tanstack/react-table@8.10.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-bXhjA7xsTcsW8JPTTYlUg/FuBpn8MNjiEPhkNhIGCUR6iRQM2+WEco4OBpvDeVcR9SE+bmWLzdfiY7bCbCSVuA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@tanstack/table-core': 8.10.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@tanstack/table-core@8.10.7:
+    resolution: {integrity: sha512-KQk5OMg5OH6rmbHZxuNROvdI+hKDIUxANaHlV+dPlNN7ED3qYQ/WkpY2qlXww1SIdeMlkIhpN/2L00rof0fXFw==}
+    engines: {node: '>=12'}
+    dev: false
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
