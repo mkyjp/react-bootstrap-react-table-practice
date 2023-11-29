@@ -7,6 +7,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import { Button, Table as BTable } from "react-bootstrap";
 
 type Expènses = {
   id: string;
@@ -58,7 +59,7 @@ const columns = [
   columnHelper.accessor((row) => row.date, {
     id: "date",
     cell: (info) => <i>{info.getValue()}</i>,
-    header: () => <span>Last Name</span>,
+    header: () => "Date",
     footer: (info) => info.column.id,
   }),
   columnHelper.accessor("amount", {
@@ -84,7 +85,7 @@ function App() {
 
   return (
     <div className="p-2">
-      <table>
+      <BTable striped bordered hover responsive size="sm">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -128,11 +129,11 @@ function App() {
             </tr>
           ))}
         </tfoot>
-      </table>
+      </BTable>
       <div className="h-4" />
-      <button onClick={() => rerender()} className="border p-2">
-        Rerender
-      </button>
+      <Button onClick={() => rerender()} className="border p-2">
+        Click me
+      </Button>
     </div>
   );
 }
